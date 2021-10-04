@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: windows-2019
+    runs-on: windows-2016
 
     steps:
       - name: Check out repository code
@@ -31,5 +31,5 @@ jobs:
         shell: cmd
 
       - name: out
-        run: dir out/
+        run: dir
         shell: cmd
