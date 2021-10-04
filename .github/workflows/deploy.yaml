@@ -15,6 +15,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
+      - name: Add nuget
+        uses: nuget/setup-nuget@v1
+        with:
+           nuget-version: '5.x'
+
+      - name: nuget restore
+      - run: nuget restore dotnet-aspmvc5-v1/BeanstalkDotNetSample.sln
+
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.3
 
