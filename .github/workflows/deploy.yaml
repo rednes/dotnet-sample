@@ -21,7 +21,7 @@ jobs:
            nuget-version: '5.x'
 
       - name: nuget restore
-      - run: nuget restore dotnet-aspmvc5-v1/BeanstalkDotNetSample.sln
+        run: nuget restore dotnet-aspmvc5-v1/BeanstalkDotNetSample.sln
 
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.3
