@@ -17,8 +17,6 @@ jobs:
 
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.3
-        with:
-          vswhere-path: 'C:\tools\'
 
       - name: MSBuild
         run: msbuild dotnet-aspmvc5-v1/BeanstalkDotNetSample.sln -p:OutDir="out/"
