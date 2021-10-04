@@ -1,0 +1,29 @@
+name: 'Deploy to Dev'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+
+jobs:
+  deploy:
+    runs-on: windows-2019
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.3
+        with:
+          vswhere-path: 'C:\tools\'
+
+      - name: MSBuild
+        run: msbuild dotnet-aspmvc5-v1/BeanstalkDotNetSample.sln -p:OutDir="out/"
+        shell: cmd
+
+      - name: out
+        run: dir out/
+        shell: cmd
