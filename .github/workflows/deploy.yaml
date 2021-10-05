@@ -34,4 +34,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: dotnet-aspmvc5-v1/MVC5App/obj/Relaese/Package/Archive
+          path: dotnet-aspmvc5-v1/MVC5App/obj/Release/Package/Archive
