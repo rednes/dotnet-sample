@@ -27,7 +27,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.3
 
       - name: MSBuild
-        run: msbuild dotnet-aspmvc5-v1/BeanstalkDotNetSample.sln /p:TargetFrameworkVersion=v4.5.2 /p:Configuration=Release /p:DeployIisAppPath="Default Web Site" /p:PackageAsSingleFile=false /t:Package
+        run: msbuild dotnet-aspmvc5-v1/MVC5App/MVC5App.csproj /p:TargetFrameworkVersion=v4.5.2 /p:Configuration=Release /p:DeployIisAppPath="Default Web Site" /p:PackageAsSingleFile=false /t:Package
         shell: cmd
 
       - name: upload artifact
